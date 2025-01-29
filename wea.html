@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="wea.css">
+    <script src="wea.js" defer></script>
+</head>
+<body>
+    <header class="bar">
+        <div class="heading">
+            <h1>Weather Dashboard</h1>
+        </div>
+        <div class="search">
+            <input type="text" id="cityInput" placeholder="Enter City Name" spellcheck="false">
+            <button id="searchBtn"><img src="search.png" alt="Search Icon"></button>
+        </div>
+        <div class="spinner" id="spinner"></div>
+    </header>
+    
+    <div class="container">
+        <div class="currentWeather">
+            <div class="weather">
+                <div class="logo">
+                    <img id="weatherIcon" src="clear.png" alt="Weather Icon">
+                </div>
+                <div class="locationTemp">
+                    <p class="temp" id="temperature">--°C</p>
+                    <p class="city" id="cityName">City, Country</p>
+                </div>
+            </div>
+            <div class="mooncycle">
+                <div class="sunriseTime">
+                    <p id="sunrise">--:-- AM</p>
+                    <p>Sunrise</p>
+                </div>
+                <div class="sundownTime">
+                    <p id="sunset">--:-- PM</p>
+                    <p>Sunset</p>
+                </div>
+            </div>
+            <div class="conditions">
+                <div class="col humidity-col">
+                    <img src="humidity.png" alt="Humidity">
+                    <div>
+                        <p class="humidity" id="humidity">--%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col wind-col">
+                    <img src="wind.png" alt="Wind">
+                    <div>
+                        <p class="wind" id="windSpeed">-- km/h</p>
+                        <p>Wind</p>
+                    </div>
+                </div>
+                <div class="col uv-col">
+                    <img src="uv.png" alt="UV Index">
+                    <div>
+                        <p class="UVIndex" id="uvIndex">--</p>
+                        <p>UV Index</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="forecast">
+            <h2>Upcoming Forecast</h2>
+            <div class="templist" id="forecastList">
+                <!-- Forecast will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

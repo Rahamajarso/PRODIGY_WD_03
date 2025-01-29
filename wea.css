@@ -1,0 +1,153 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #adc7ab, #2c16ab), url('ree1.jpg'); /* Add your image URL here */
+    background-size: cover; /* Ensures the image covers the whole screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image from repeating */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Header */
+.bar {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+/* Search Bar */
+.search {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.search input {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+}
+
+.search button {
+    border: none;
+    background: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Spinner */
+.spinner {
+    display: none;
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Weather Details */
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+.weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+}
+
+.locationTemp {
+    font-size: 1.5rem;
+}
+
+/* Additional Weather Info */
+.conditions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Forecast Section */
+.Uforecast {
+    margin-top: 30px;
+}
+
+.templist {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.next {
+    text-align: center;
+    margin: 10px;
+}
+
+.iconWrapper img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .search input {
+        width: 200px;
+    }
+}
